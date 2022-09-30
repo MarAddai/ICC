@@ -1,0 +1,9 @@
+version: '3.7'
+services: 
+  api: 
+  # mount a volume so you can change code and the container updates. 
+    volumes: 
+    - ./:/app/api/:delegated
+    command: ['npm', 'run', 'api-interactive']
+
+      
